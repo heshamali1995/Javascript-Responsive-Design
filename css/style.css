@@ -1,0 +1,1187 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --main--color: green
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.main {
+    height: 4850px;
+    width: 100%;
+    position: relative
+}
+.container {
+    width: 92%;
+    height: 100%;
+    margin-left: 4%
+}
+.setting {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 150px;
+    left: -200px;
+    background-color: #FFF;
+    z-index: 3;
+    transition: all 0.5s ease;
+}
+.setting.open {left: 0px}
+.setting i {
+    line-height: 35px;
+    color: #000;
+    cursor: pointer;
+    text-align: right;
+    position: absolute;
+    right: -32px;
+    top: 100px;
+    padding: 0px 8px;
+    background-color: #FFF
+}
+.setting .options {width: 100%; height: 100%;}
+.setting .options .option-color {padding: 20px}
+.setting .options .option-color .colors-list {
+    list-style-type: none;
+    text-align: left;
+    margin-top: 10px
+}
+.setting .options .option-color .colors-list li {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: .25;
+    cursor: pointer;
+    display: inline-block;
+}
+.setting .options .option-color .colors-list li.active {opacity: 1}
+.setting .options .option-color .colors-list li:first-of-type {background-color: green}
+.setting .options .option-color .colors-list li:nth-of-type(2) {background-color: red}
+.setting .options .option-color .colors-list li:nth-of-type(3) {background-color: yellowgreen}
+.setting .options .option-color .colors-list li:nth-of-type(4) {background-color: orange}
+.setting .options .option-color .colors-list li:nth-of-type(5) {background-color: blue}
+.setting .options .option-background {padding: 20px}
+.setting .options .option-background .backgrounds .yes,
+.setting .options .option-background .backgrounds .no {
+    width: 50px;
+    background-color: green;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFF;
+    text-align: center;
+    padding: 3px 8px;
+    opacity: .5
+}
+.setting .options .option-background .backgrounds span.active {opacity: 1}
+.setting .options .option-bullets {padding: 20px}
+.setting .options .option-bullets .bullets .yes,
+.setting .options .option-bullets .bullets .no {
+    width: 50px;
+    background-color: green;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFF;
+    text-align: center;
+    padding: 3px 8px;
+    opacity: .5
+}
+.setting .options .option-bullets .bullets span.active {opacity: 1}
+.setting .options .option-reset {padding: 20px;}
+.setting .options .option-reset button {
+    padding: 5px 10px;
+    color: #FFF;
+    background-color: red;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid #CCC;
+    
+}
+/*Start Navigation Bullets*/
+
+.nav-bullets {
+    width: 30px;
+    height: 155px;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 5;
+}
+.nav-bullets .bullet:first-of-type {margin-top: 5px}
+.nav-bullets .bullet {
+    width: 30px;
+    height: 20px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.nav-bullets .bullet .clickable {
+    width: 14px;
+    height: 14px;
+    border-radius: 50% 50%;
+    background-color: #FFF;
+    border: 1px solid var(--main--color);
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    cursor: pointer;
+}
+.nav-bullets .bullet .clickable .tool {
+    position: absolute;
+    left: -136px;
+    top: -6px;
+    width: 130px;
+    text-align: center;
+    color: #FFF;
+    display: none;
+    background-color: var(--main--color);
+    position: relative;
+    pointer-events: none;
+}
+.nav-bullets .bullet .clickable:hover .tool {display: block}
+.nav-bullets .bullet .clickable .tool:before {
+    content: "";
+    border-width: 5px;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 7px;
+    right: -10px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--main--color)
+}
+
+/*End Navigation Bullets*/
+
+/*Start Header*/
+
+header {
+    width: 100%;
+    height: 700px;
+    background-image: url("../images/01.jpg");
+    background-size: cover
+}
+header .head-top {
+    width: 100%;
+    height: 80px;
+    display: flex
+}
+header .head-top .logo {width: 40%; height: 100%;}
+header .head-top .logo h1 {
+    text-align: center;
+    line-height: 80px;
+    color: #FFF
+}
+header i {
+    color: #FFF;
+    position: absolute;
+    cursor: pointer;
+    right: 13%;
+    top: 25px;
+    visibility: hidden;
+}
+header .head-top nav {width: 60%; height: 100%}
+header .head-top nav ul {list-style-type: none; text-align: center;}
+header .head-top nav ul li {display: inline-block; margin-left: 20px}
+header .head-top nav ul li a {
+    text-decoration: none;
+    line-height: 80px;
+    color: #FFF
+}
+header .head-top nav ul li a:hover {color: var(--main--color)}
+header .head-body {
+    height: 620px;
+    width: 100%;
+    position: relative;
+}
+header .head-body div {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    top: 200px;
+    text-align: center;
+}
+header .head-body div h2 {margin-top: 20px; color: #FFF}
+header .head-body div h2 span {color: var(--main--color)}
+header .head-body div p {margin-top: 10px; color: #FFF}
+
+/*End Header*/
+
+/*Start Articles*/
+
+/*Start About*/
+
+.about-us {
+    width: 100%;
+    background-color: #FFF;
+    height: 300px
+}
+.about-us .about-body {
+    display: flex;
+    width: 100%;
+    height: 100%
+}
+.about-us .about-body .about-left {width: 45%; height: 100%}
+.about-us .about-body .about-left h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: var(--main--color)
+}
+.about-us .about-body .about-right {
+    width: 55%;
+    height: 100%;
+    position: relative;
+}
+.about-us .about-body .about-right img {
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 80px;
+    height: 200px;
+    position: absolute;
+    right: 10px
+}
+/*End About*/
+
+/*Start Skills*/
+.skills {
+    width: 100%;
+    height: 550px;
+    background-color: #DDD
+}
+.skills .skills-top {width: 100%; height: 100px}
+.skills .skills-top h3 {
+    color: var(--main--color);
+    text-align: center;
+    line-height: 100px;
+}
+.skills .skills-body {width: 100%; height: 450px}
+.skills .skills-body .one {
+    width: 100%;
+    height: 60px;
+    background-color: #FFF;
+    display: flex;
+    margin-bottom: 20px;
+}
+.skills .skills-body .one .one-left {width: 15%; height: 100%}
+.skills .skills-body .one .one-left p {
+    text-align: center;
+    line-height: 60px;
+    color: #000;
+    font-weight: bold;
+    
+}
+.skills .skills-body .one .one-right {
+    width: 85%;
+    height: 60%;
+    background-color: #DDD;
+    margin-top: 12px;
+    margin-left: 9px;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.skills .skills-body .one .one-right .overlay {
+    height: 100%;
+    width: 90%;
+    background-color: var(--main--color);
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+.skills .skills-body .one:nth-of-type(2) .one-right .overlay {width: 80%}
+.skills .skills-body .one:nth-of-type(3) .one-right .overlay {width: 70%}
+.skills .skills-body .one:nth-of-type(4) .one-right .overlay {width: 80%}
+.skills .skills-body .one:nth-of-type(5) .one-right .overlay {width: 60%}
+
+/*End Skills*/
+
+/*Start Gallery*/
+
+.gallery {
+    width: 100%;
+    height: 700px;
+    background-color: #FFF;
+    text-align: center;
+}
+.gallery .gal-top {width: 100%; height: 100px}
+.gallery .gal-top h3 {
+    text-align: center;
+    line-height: 100px;
+    color: var(--main--color)
+}
+.gallery .gal-body {width: 100%; height: 600px}
+.gallery .gal-body .img-box {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin-bottom: 41.32px;
+}
+.gallery .gal-body .img-box .img-one {width: 20%; margin-left: 5%}
+.gallery .gal-body .img-box .img-one img {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #EEE;
+    padding: 1px;
+    background-color: #EEE;
+    cursor: pointer;
+}
+.gallery .gal-body .img-box-two {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin-bottom: 41.32px;
+}
+.gallery .gal-body .img-box-two .img-one {width: 20%; margin-left: 5%}
+.gallery .gal-body .img-box-two .img-one img {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #EEE;
+    padding: 1px;
+    background-color: #EEE;
+    cursor: pointer;
+}
+.gallery .gal-body .img-box-three {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin-bottom: 41.32px;
+}
+.gallery .gal-body .img-box-three .img-one {width: 20%; margin-left: 5%}
+.gallery .gal-body .img-box-three .img-one:nth-of-type(1) {width: 20%; margin-left: 30%}
+.gallery .gal-body .img-box-three .img-one img {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #EEE;
+    padding: 1px;
+    background-color: #EEE;
+    cursor: pointer;
+}
+.pop-up {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 20
+}
+.pop-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    padding: 20px;
+    z-index: 50
+}
+.pop-box img {
+    max-width: 100%;
+}
+.close-span {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--main--color);
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: bold;
+}
+/*End Gallery*/
+
+/*Start Timeline*/
+
+/*Line One*/
+
+.timeline {
+    width: 100%;
+    height: 1000px;
+    background-color: #DDD
+}
+.timeline .time-first {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden
+}
+.timeline .time-first:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    bottom: -30px;
+    background-color: var(--main--color);
+    margin-left: -1px
+}
+.timeline .time-first:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 50%;
+    background-color: #FFF;
+    margin-left: -10px;
+    top: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    border: 2px solid var(--main--color)
+}
+.timeline .time-first .year {
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 25px;
+    background-color: var(--main--color);
+    margin-left: -30px;
+    border-radius: 5px;
+    top: 40px
+}
+.timeline .time-first .year p {
+    text-align: center;
+    line-height: 25px;
+    color: #FFF
+}
+.timeline .time-first .text {
+    width: 47%;
+    height: 150px;
+    background-color: #FFF;
+    float: left;
+    margin-top: 80px;
+    position: relative;
+}
+.timeline .time-first .text:before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #FFF;
+    width: 0px;
+    height: 0px;
+    right: -20px;
+    top: 20px
+}
+.timeline .time-first .text p {
+    margin-left: 10px;
+    margin-right: 10px
+}
+.timeline .time-first .text p:first-of-type {
+    font-weight: bold;
+    color: var(--main--color);
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+.timeline .time-second {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden
+}
+.timeline .time-second:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    background-color: var(--main--color);
+}
+.timeline .time-second:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    background-color: #FFF;
+    border: 2px solid var(--main--color);
+    z-index: 2;
+    top: 100px;
+    border-radius: 50%;
+}
+.timeline .time-second .text {
+    width: 47%;
+    height: 150px;
+    background-color: #FFF;
+    float: right;
+    margin-top: 80px;
+    position: relative;
+}
+.timeline .time-second .text:before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFF transparent transparent;
+    width: 0px;
+    height: 0px;
+    left: -20px;
+    top: 20px
+}
+.timeline .time-second .text p {
+    margin-left: 10px;
+    margin-right: 10px
+}
+.timeline .time-second .text p:first-of-type {
+    font-weight: bold;
+    color: var(--main--color);
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+/*Line One*/
+
+/*Line Two*/
+
+.timeline .time-first-two {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden
+}
+.timeline .time-first-two:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    background-color: var(--main--color);
+    margin-left: -1px
+}
+.timeline .time-first-two:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 50%;
+    background-color: #FFF;
+    margin-left: -10px;
+    top: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    border: 2px solid var(--main--color)
+}
+.timeline .time-first-two .year {
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 25px;
+    background-color: var(--main--color);
+    margin-left: -30px;
+    border-radius: 5px;
+    top: 40px
+}
+.timeline .time-first-two .year p {
+    text-align: center;
+    line-height: 25px;
+    color: #FFF
+}
+.timeline .time-first-two .text {
+    width: 47%;
+    height: 150px;
+    background-color: #FFF;
+    float: left;
+    margin-top: 80px;
+    position: relative;
+}
+.timeline .time-first-two .text:before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #FFF;
+    width: 0px;
+    height: 0px;
+    right: -20px;
+    top: 20px
+}
+.timeline .time-first-two .text p {
+    margin-left: 10px;
+    margin-right: 10px
+}
+.timeline .time-first-two .text p:first-of-type {
+    font-weight: bold;
+    color: var(--main--color);
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+.timeline .time-second-two {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden
+}
+.timeline .time-second-two:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    background-color: var(--main--color)
+}
+.timeline .time-second-two:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    background-color: #FFF;
+    border: 2px solid var(--main--color);
+    z-index: 2;
+    top: 100px;
+    border-radius: 50%;
+}
+.timeline .time-second-two .text {
+    width: 47%;
+    height: 150px;
+    background-color: #FFF;
+    float: right;
+    margin-top: 80px;
+    position: relative;
+}
+.timeline .time-second-two .text:before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFF transparent transparent;
+    width: 0px;
+    height: 0px;
+    left: -20px;
+    top: 20px
+}
+.timeline .time-second-two .text:before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFF transparent transparent ;
+    width: 0px;
+    height: 0px;
+    left: -20px;
+    top: 20px
+}
+.timeline .time-second-two .text p {
+    margin-left: 10px;
+    margin-right: 10px
+}
+.timeline .time-second-two .text p:first-of-type {
+    font-weight: bold;
+    color: var(--main--color);
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+/*Line Two*/
+
+/*End Timeline*/
+
+/*Start Features*/
+.features {width: 100%; height: 700px}
+.features .feat-top {width: 100%; height: 100px}
+.features .feat-top h3 {
+    line-height: 100px;
+    color: var(--main--color);
+    text-align: center;
+}
+.features .feat-body {width: 100%; height: 500px}
+.features .feat-box-one {
+    display: flex;
+    width: 100%;
+    height: 250px;
+}
+.features .feat-box-one .feat-box {
+    width: 30%;
+    height: 150px;
+    position: relative
+}
+.features .feat-box-one .feat-box:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: -50px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--main--color)
+}
+.features .feat-box-one .feat-box img {
+    width: 80%;
+    height: 150px;
+    margin-left: 10%
+}
+.features .feat-box-one .feat-box h4 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    height: 7px
+}
+.features .feat-box-one .feat-box p {text-align: center}
+.features .feat-box-two {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-top:40px
+}
+.features .feat-box-two .feat-box {
+    width: 30%;
+    height: 150px;
+    position: relative
+}
+.features .feat-box-two .feat-box:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: -50px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--main--color)
+}
+.features .feat-box-two .feat-box img {
+    width: 80%;
+    height: 150px;
+    margin-left: 10%
+}
+.features .feat-box-two .feat-box h4 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    height: 7px;
+}
+.features .feat-box-two .feat-box p {text-align: center}
+/*End Features*/
+
+/*Start Testimonials*/
+.testimonial {
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to right, green 50%, black 50%, black 100%)
+}
+.testimonial .test-top {width: 100%; height: 100px}
+.testimonial h3 {
+    color: #FFF;
+    line-height: 100px;
+    text-align: left;
+}
+.testimonial .test-body {
+    width: 100%;
+    height: 400px;
+    display: flex
+}
+.testimonial .test-body .test-body-one, .test-body-two, .test-body-three {
+    width: 32%;
+    margin-right: 2%;
+    height: 250px;
+    background-color: #FFF
+}
+.testimonial .test-body .test-body-one .text {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+.testimonial .test-body .test-body-one .info {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 30px
+}
+.testimonial .test-body .test-body-one .info .circle {
+    width: 30%;
+    height: 100%;
+    background-color: #DDD;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 0px
+}
+.testimonial .test-body .test-body-one .info .name {
+    margin-left: 25px;
+    text-align: center;
+    margin-top: 25px
+}
+.testimonial .test-body .test-body-one .info .name p {margin-top: 5px}
+.testimonial .test-body .test-body-two .text {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+.testimonial .test-body .test-body-two .info {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 30px
+}
+.testimonial .test-body .test-body-two .info .circle {
+    width: 30%;
+    height: 100%;
+    background-color: #DDD;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 0px
+}
+.testimonial .test-body .test-body-two .info .name {
+    margin-left: 25px;
+    text-align: center;
+    margin-top: 25px
+}
+.testimonial .test-body .test-body-two .info .name p {margin-top: 5px}
+.testimonial .test-body .test-body-three .text {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+.testimonial .test-body .test-body-three .info {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 30px
+}
+.testimonial .test-body .test-body-three .info .circle {
+    width: 30%;
+    height: 100%;
+    background-color: #DDD;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 0px
+}
+.testimonial .test-body .test-body-three .info .name {
+    margin-left: 25px;
+    text-align: center;
+    margin-top: 25px
+}
+.testimonial .test-body .test-body-three .info .name p {margin-top: 5px}
+.testimonial .test-body .test-body-three {margin-right: 0px}
+/*End Testimonials*/
+
+/*End Articles*/
+
+/*Start contact us*/
+.contact {
+    width: 100%;
+    height: 350px;
+    background-color: #FFF
+}
+.contact .top {width: 100%; height: 100px}
+.contact .top h3 {
+    text-align: center;
+    color: var(--main--color);
+    line-height: 100px;
+}
+.contact .form {
+    width: 100%;
+    height: 250px;
+    display: flex
+}
+.contact .form .form-left {
+    width: 40%;
+    margin-left: 9%;
+    height: 100%
+}
+.contact .form .form-left input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: #DDD
+}
+.contact .form .form-right {
+    width: 40%;
+    margin-left: 2%;
+    margin-right: 9%;
+    height: 100%
+}
+.contact .form .form-right textarea {
+    margin: 0px 0px 5px;
+    width: 100%;
+    height: 125px;
+    resize: none;
+    background-color: #DDD
+}
+.contact .form .form-right button {
+    width: 100%;
+    height: 35px;
+    background-color: var(--main--color);
+    color: #FFF;
+    cursor: pointer
+}
+/*End contact us*/
+
+/*Start Footer*/
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+}
+footer p {
+    color: #FFF;
+    font-weight: bold;
+    line-height: 50px;
+}
+/*End Footer*/
+
+/* Start Grid System */
+
+/* Small Screens */
+/* (min-width: 576px) */
+
+@media all and (max-width: 767px) {
+    header {
+        width: 100%;
+        height: 700px;
+        background-image: url("../images/01.jpg");
+        background-size: 100% 700px
+    }
+    header .head-top .logo h1 {
+        font-size: 24px
+    }
+    .about-us .about-body {
+        display: block
+    }
+    .about-us .about-body .about-left {
+        display: block;
+        text-align: center;
+        widtH: 100%;
+        height: 40%
+    }
+    .about-us .about-body .about-right {
+        width: 100%
+    }
+    .about-us .about-body .about-right img {
+        text-align: center;
+        width: 200px;
+        height: 150px;
+        left: 50%;
+        top: 32%;
+        transform: translate(-50%, -50%);
+        padding: 0px;
+        margin: 0px
+    }
+    .skills .skills-body .one .one-left p {
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 5px
+    }
+    .nav-bullets {
+        width: 25px;
+        height: 155px;
+        position: fixed;
+        top: 100px;
+        right: 5px;
+        z-index: 5;
+    }
+    .nav-bullets .bullet {
+        width: 25px;
+    }
+    .timeline .time-second-two .text,
+    .timeline .time-second .text {
+        right: -8px
+    }
+    .timeline .time-first-two .text,
+    .timeline .time-first .text {
+        left: -8px
+    }
+    .timeline .time-first .text p:first-of-type,
+    .timeline .time-second .text p:first-of-type,
+    .timeline .time-first-two .text p:first-of-type,
+    .timeline .time-second-two .text p:first-of-type {
+        margin-top: 5px;
+        margin-bottom: 0px
+    }
+    .timeline .time-first .text p,
+    .timeline .time-second .text p,
+    .timeline .time-first-two .text p,
+    .timeline .time-second-two .text p {
+        font-size: 12px
+    }
+    .features .feat-box-one .feat-box h4,
+    .features .feat-box-two .feat-box h4 {
+        font-size: 12px;
+    }
+    .features .feat-box-one .feat-box p,
+    .features .feat-box-two .feat-box p {
+        font-size: 12px;
+        margin-top: 0px;
+        padding: 5px
+    }
+    .features .feat-box-one .feat-box:before,
+    .features .feat-box-two .feat-box:before {
+        bottom: -40px
+    }
+    .testimonial .test-body .test-body-one .text,
+    .testimonial .test-body .test-body-two .text,
+    .testimonial .test-body .test-body-three .text {
+        font-size: 12px;
+        padding: 5px
+    }
+    .testimonial .test-body .test-body-one .info,
+    .testimonial .test-body .test-body-two .info,
+    .testimonial .test-body .test-body-three .info {
+        display: block;
+        margin-top: 0px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .testimonial .test-body .test-body-one .info .circle,
+    .testimonial .test-body .test-body-two .info .circle,
+    .testimonial .test-body .test-body-three .info .circle {
+        width: 80px;
+        height: 80px;
+        background-color: #DDD;
+        border-radius: 50%;
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-75%, -50%);
+    }
+    .testimonial .test-body .test-body-one .info .name,
+    .testimonial .test-body .test-body-two .info .name,
+    .testimonial .test-body .test-body-three .info .name {
+        font-size: 12px;
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 120px;
+        left: 55%;
+        transform: translate(-65%, -50%);
+    }
+}
+/* Medium Screens */
+/* (min-width: 768) */
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .timeline .time-second-two .text,
+    .timeline .time-second .text {
+        right: -8px
+    }
+    .timeline .time-first-two .text,
+    .timeline .time-first .text {
+        left: -8px
+    }
+    .timeline .time-first .text p:first-of-type,
+    .timeline .time-second .text p:first-of-type,
+    .timeline .time-first-two .text p:first-of-type,
+    .timeline .time-second-two .text p:first-of-type {
+        margin-top: 10px;
+        margin-bottom: 5px
+    }
+    .timeline .time-first .text p,
+    .timeline .time-second .text p,
+    .timeline .time-first-two .text p,
+    .timeline .time-second-two .text p {
+        font-size: 14px
+    }
+    .features .feat-box-one .feat-box p,
+    .features .feat-box-two .feat-box p {
+        font-size: 14px;
+        margin-left: 5px;
+        padding: 10px
+    }
+    .testimonial .test-body .test-body-one .text,
+    .testimonial .test-body .test-body-two .text,
+    .testimonial .test-body .test-body-three .text {
+        font-size: 16px;
+        padding: 5px
+    }
+    .testimonial .test-body .test-body-one .info,
+    .testimonial .test-body .test-body-two .info,
+    .testimonial .test-body .test-body-three .info {
+        display: block;
+        margin-top: 0px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .testimonial .test-body .test-body-one .info .circle,
+    .testimonial .test-body .test-body-two .info .circle,
+    .testimonial .test-body .test-body-three .info .circle {
+        width: 80px;
+        height: 80px;
+        background-color: #DDD;
+        border-radius: 50%;
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-75%, -50%);
+    }
+    .testimonial .test-body .test-body-one .info .name,
+    .testimonial .test-body .test-body-two .info .name,
+    .testimonial .test-body .test-body-three .info .name {
+        font-size: 12px;
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 120px;
+        left: 55%;
+        transform: translate(-65%, -50%);
+    }
+}
+
+@media all and (max-width: 991px) {
+    header i {
+        visibility: visible;
+    }
+    header .head-top nav ul {
+        display: none
+    }
+    header .head-top nav ul.open {
+        width: 92%;
+        margin-left: 4%;
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        background-color: #FFF;
+        text-align: left;
+        z-index: 10
+    }
+    header .head-top nav ul.open li {
+        display: block
+    }
+    header .head-top nav ul.open li a {
+        color: var(--main--color);
+        font-weight: bold;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+/* Desktop Screens */
+/* (min-width: 992px) */
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .features .feat-box-one .feat-box p,
+    .features .feat-box-two .feat-box p {
+        font-size: 16px;
+        padding: 10px
+    }
+}
+
+/* Large Screens */
+/* (min-width: 1200px) */
+
+/* End Grid System */

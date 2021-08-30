@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Description" content="Javascript Project" />
+        <title>Javascript Project</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/all.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"/>
+        <style></style>
+        <script></script>
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="main">
+            <div class="setting">
+                <i class="fas fa-cog" id="box"></i>
+                <div class="options">
+                    <div class="option-color">
+                        <h4>Colors</h4>
+                        <ul class="colors-list">
+                            <li class="active" data-color="green"></li>
+                            <li data-color="red"></li>
+                            <li data-color="yellowgreen"></li>
+                            <li data-color="orange"></li>
+                            <li data-color="blue"></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="option-background">
+                        <h4>Backgrounds</h4>
+                        <div class="backgrounds">
+                            <span class="yes active" data-background="yes">Yes</span>
+                            <span class="no" data-background="no">No</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="option-bullets">
+                        <h4>Show Bullets</h4>
+                        <div class="bullets">
+                            <span class="yes active" data-display="show">Yes</span>
+                            <span class="no" data-display="hide">No</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="option-reset">
+                        <h4>Reset Options</h4>
+                        <button class="default">Back to default</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+            <!--Start Navigation Bullets-->
+
+            <div class="nav-bullets">
+                <div class="bullet">
+                    <div class="clickable" data-section=".about-us">
+                        <div class="tool">About Us</div>
+                    </div>
+                </div>
+                <div class="bullet">
+                    <div class="clickable" data-section=".skills">
+                        <div class="tool">Our Skills</div>
+                    </div>
+                </div>
+                <div class="bullet">
+                    <div class="clickable" data-section=".gallery">
+                        <div class="tool">Our Gallery</div>
+                    </div>
+                </div>
+                <div class="bullet">
+                    <div class="clickable" data-section=".timeline">
+                        <div class="tool">Timeline</div>
+                    </div>
+                </div>
+                <div class="bullet">
+                    <div class="clickable" data-section=".features">
+                        <div class="tool">Features</div>
+                    </div>
+                </div>
+                <div class="bullet">
+                    <div class="clickable" data-section=".testimonial">
+                        <div class="tool">Testimonials</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--End Navigation Bullets-->
+
+            <!--Start Header-->
+
+            <header>
+                <div class="container">
+                    <div class="head-top">
+                        <div class="logo">
+                            <h1>Special Design</h1>
+                        </div>
+                        <!--Start Toggle Menu-->
+                            <i class="fas fa-2x fa-bars"></i>
+                        <!--End Toggle Menu-->
+                        <nav>
+                            <ul class="nav-list">
+                                <li><a href="#" data-section=".about-us">About</a></li>
+                                <li><a href="#" data-section=".skills">Skills</a></li>
+                                <li><a href="#" data-section=".gallery">Gallery</a></li>
+                                <li><a href="#" data-section=".timeline">Timeline</a></li>
+                                <li><a href="#" data-section=".features">Features</a></li>
+                                <li><a href="#" data-section=".testimonial">Testimonials</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="head-body">
+                        <div>
+                            <h2>We are <span>Creative</span> agency</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, suscipit ullam nesciunt quo eius magnam aliquam dolor expedita architecto quae soluta aspernatur? Tenetur molestias, placeat incidunt facere impedit error magni!</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--End Header-->
+
+            <!--Start Articles-->
+
+            <!--Start About-->
+
+            <article class="about-us">
+                <div class="container">
+                    <div class="about-body">
+                        <section class="about-left">
+                            <h3 id="about">About Us</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellendus nam, at corporis fuga odio odit voluptates porro veniam iusto quaerat eveniet accusamus dolorem incidunt maiores delectus unde aspernatur ab?</p>
+                        </section>
+                        <section class="about-right">
+                            <img src="images/06.jpg" />
+                        </section>
+                    </div>
+                </div>
+            </article>
+
+            <!--End About-->
+
+            <!--Start Skills-->
+
+            <article class="skills">
+                <div class="container">
+                    <section class="skills-top">
+                        <h3 id="skills">Our Skills</h3>
+                    </section>
+                    <section class="skills-body">
+                        <div class="one">
+                            <div class="one-left">
+                                <p>HTML</p>
+                            </div>
+                            <div class="one-right">
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <div class="one-left">
+                                <p>CSS</p>
+                            </div>
+                            <div class="one-right">
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <div class="one-left">
+                                <p>Javascript</p>
+                            </div>
+                            <div class="one-right">
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <div class="one-left">
+                                <p>Bootstrap</p>
+                            </div>
+                            <div class="one-right">
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <div class="one-left">
+                                <p>React JS</p>
+                            </div>
+                            <div class="one-right">
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!--End Skills-->
+            
+            <!--Start Gallery-->
+
+            <article class="gallery">
+                <div class="container">
+                    <section class="gal-top">
+                        <h3 id="gallery">Our Gallery</h3>
+                    </section>
+                    <section class="gal-body">
+                        <div class="img-box">
+                            <div class="img-one">
+                                <img src="images/07.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/08.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/09.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/10.jpg" />
+                            </div>
+                        </div>
+                        <div class="img-box-two">
+                            <div class="img-one">
+                                <img src="images/11.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/12.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/13.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/14.jpg" />
+                            </div>
+                        </div>
+                        <div class="img-box-three">
+                            <div class="img-one">
+                                <img src="images/15.jpg" />
+                            </div>
+                            <div class="img-one">
+                                <img src="images/16.jpg" />
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!--End Gallery-->
+
+            <!--Start Timeline-->
+
+            <article class="timeline">
+                <div class="container">
+                    <section class="time-first">
+                        <div class="year">
+                            <p id="time">2018</p>
+                        </div>
+                        <div class="text">
+                            <p>Testing Heading</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatem, libero, velit fugiat possimus vero harum molestiae laboriosam cum modi numquam officiis perspiciatis totam maxime.</p>
+                        </div>
+                    </section>
+                    <section class="time-second">
+                        <div class="text">
+                            <p>Testing Heading</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatem, libero, velit fugiat possimus vero harum molestiae laboriosam cum modi numquam officiis perspiciatis totam maxime.</p>
+                        </div>
+                    </section>
+                    <section class="time-first-two">
+                        <div class="year">
+                            <p>2016</p>
+                        </div>
+                        <div class="text">
+                            <p>Testing Heading</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatem, libero, velit fugiat possimus vero harum molestiae laboriosam cum modi numquam officiis perspiciatis totam maxime.</p>
+                        </div>
+                    </section>
+                    <section class="time-second-two">
+                        <div class="text">
+                            <p>Testing Heading</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatem, libero, velit fugiat possimus vero harum molestiae laboriosam cum modi numquam officiis perspiciatis totam maxime.</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!--End Timeline-->
+
+            <!--Start Features-->
+
+            <article class="features">
+                <div class="container">
+                    <section class="feat-top">
+                        <h3 id="feat">Our Features</h3>
+                    </section>
+                    <section class="feat-body">
+                        <div class="feat-box-one">
+                            <div class="feat-box">
+                                <img src="images/17.jpg" />
+                                <h4>Development</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui odio, eveniet.</p>
+                            </div>
+                            <div class="feat-box">
+                                <img src="images/22.jpg" />
+                                <h4>Marketing</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui odio, eveniet.</p>
+                            </div>
+                            <div class="feat-box">
+                                <img src="images/19.jpg" />
+                                <h4>Hosting</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui odio, eveniet.</p>
+                            </div>
+                        </div>
+                        <div class="feat-box-two">
+                            <div class="feat-box">
+                                <img src="images/20.jpg" />
+                                <h4>Mobile Development</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui odio, eveniet.</p>
+                            </div>
+                            <div class="feat-box">
+                                <img src="images/21.jpg" />
+                                <h4>Cloud And Servers</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui odio, eveniet.</p>
+                            </div>
+                            <div class="feat-box">
+                                <img src="images/18.jpg" />
+                                <h4>SEO</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui odio, eveniet.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!--End Features-->
+
+            <!--Start Testimonials-->
+
+            <article class="testimonial">
+                <div class="container">
+                    <section class="test-top">
+                        <h3 id="test">Testimonials</h3>
+                    </section>
+                    <section class="test-body">
+                        <div class="test-body-one">
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta deserunt dolorum ad eius impedit vitae tempora.</p>
+                            </div>
+                            <div class="info">
+                                <div class="circle"></div>
+                                <div class="name">
+                                    <h4>Mohamed Ahmed</h4>
+                                    <p>CEO at company</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test-body-two">
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta deserunt dolorum ad eius impedit vitae tempora.</p>
+                            </div>
+                            <div class="info">
+                                <div class="circle"></div>
+                                <div class="name">
+                                    <h4>Mohamed Ahmed</h4>
+                                    <p>CEO at company</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="test-body-three">
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta deserunt dolorum ad eius impedit vitae tempora.</p>
+                            </div>
+                            <div class="info">
+                                <div class="circle"></div>
+                                <div class="name">
+                                    <h4>Mohamed Ahmed</h4>
+                                    <p>CEO at company</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!--End Testimonials-->
+
+            <!--End Articles-->
+
+            <!--Start Contact Us-->
+
+            <article class="contact">
+                <div class="container">
+                    <section class="top">
+                        <h3>Contact Us</h3>
+                    </section>
+                    <section class="form">
+                        <div class="form-left">
+                            <input type="text" placeholder="Type Your Name" autocomplete="off" name="name"/>
+                            <input type="text" placeholder="Type Your Phone" autocomplete="off" name="phone"/>
+                            <input type="text" placeholder="Type Your Email" autocomplete="off" name="email"/>
+                            <input type="text" placeholder="Subject...." autocomplete="off" name="subject"/>
+                        </div>
+                        <div class="form-right">
+                            <textarea placeholder="Your Message..." name="text"></textarea>
+                            <button>Send</button>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!--End Contact Us-->
+
+            <!--Start Footer-->
+
+            <footer>
+                <p>&copy; 2021 Hesham Ali Raof - All Rights Reserved</p>
+            </footer>
+
+            <!--End Footer-->
+            
+        </div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/file.js"></script>
+    </body>
+</html>
