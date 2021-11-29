@@ -231,6 +231,7 @@ galleryImages.forEach((oneImage) => {
 })
 
 // Remove Pop Up
+
 document.addEventListener("click", (e) => {
     if (e.target.className === "close-span") {
         document.querySelector(".pop-up").remove();
